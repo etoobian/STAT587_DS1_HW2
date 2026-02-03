@@ -1,0 +1,49 @@
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+ & Not Admit & Border & Admit \\
+\midrule
+Not Admit & 24 & 0 & 0 \\
+Border & 0 & 21 & 1 \\
+Admit & 0 & 1 & 26 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{-5pt}
+\caption{QDA confusion matrix (training data). Rows are true classes and columns are predicted classes.}
+\label{tab:q2_qda_cm_train}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+ & Not Admit & Border & Admit \\
+\midrule
+Not Admit & 2 & 2 & 0 \\
+Border & 0 & 4 & 0 \\
+Admit & 0 & 0 & 4 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{-5pt}
+\caption{QDA confusion matrix (test data). Rows are true classes and columns are predicted classes.}
+\label{tab:q2_qda_cm_test}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Dataset & Misclassification rate \\
+\midrule
+Training & 0.0274 \\
+Test & 0.1667 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{-5pt}
+\caption{QDA overall misclassification rates.}
+\label{tab:q2_qda_error_rates}
+\end{table}
