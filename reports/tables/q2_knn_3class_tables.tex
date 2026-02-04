@@ -5,14 +5,14 @@
  & Not Admit & Border & Admit \\
 \midrule
 Not Admit & 24 & 0 & 0 \\
-Border & 0 & 21 & 1 \\
-Admit & 0 & 2 & 25 \\
+Border & 1 & 20 & 1 \\
+Admit & 0 & 0 & 27 \\
 \bottomrule
 \end{tabular}
 \end{center}
 \vspace{-5pt}
-\caption{LDA confusion matrix (training data). Rows are true classes and columns are predicted classes.}
-\label{tab:q2_lda_cm_train}
+\caption{KNN confusion matrix at $K^*$ (training data). Rows are true classes and columns are predicted classes.}
+\label{tab:q2_knn_cm_train3}
 \end{table}
 
 \begin{table}[H]
@@ -21,15 +21,15 @@ Admit & 0 & 2 & 25 \\
 \toprule
  & Not Admit & Border & Admit \\
 \midrule
-Not Admit & 2 & 2 & 0 \\
+Not Admit & 3 & 1 & 0 \\
 Border & 0 & 4 & 0 \\
-Admit & 0 & 1 & 3 \\
+Admit & 0 & 0 & 4 \\
 \bottomrule
 \end{tabular}
 \end{center}
 \vspace{-5pt}
-\caption{LDA confusion matrix (test data). Rows are true classes and columns are predicted classes.}
-\label{tab:q2_lda_cm_test}
+\caption{KNN confusion matrix at $K^*$ (test data). Rows are true classes and columns are predicted classes.}
+\label{tab:q2_knn_cm_test3}
 \end{table}
 
 \begin{table}[H]
@@ -38,12 +38,12 @@ Admit & 0 & 1 & 3 \\
 \toprule
 Dataset & Misclassification Rate \\
 \midrule
-Training & 0.0411 \\
-Test & 0.2500 \\
+Training & 0.0274 \\
+Test & 0.0833 \\
 \bottomrule
 \end{tabular}
 \end{center}
 \vspace{-5pt}
-\caption{LDA overall misclassification rates.}
-\label{tab:q2_lda_error_rates}
+\caption{KNN misclassification rates (three-class) at $K^*$.}
+\label{tab:q2_knn_err3}
 \end{table}

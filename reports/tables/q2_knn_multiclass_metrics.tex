@@ -1,0 +1,33 @@
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Class & Sensitivity (OvR) & Specificity (OvR) \\
+\midrule
+Not Admit & 1.0000 & 0.9796 \\
+Border & 0.9091 & 1.0000 \\
+Admit & 1.0000 & 0.9783 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{-5pt}
+\caption{KNN multiclass one-vs-rest (OvR) sensitivity and specificity by class (training data) at $K^*$.}
+\label{tab:q2_knn_ovr_by_class}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Metric & Value \\
+\midrule
+Macro sensitivity & 0.9697 \\
+Macro specificity & 0.9860 \\
+AUC (OvR macro) & 0.9974 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{-5pt}
+\caption{KNN multiclass OvR macro-averaged metrics (training data) at $K^*$.}
+\label{tab:q2_knn_ovr_summary}
+\end{table}
