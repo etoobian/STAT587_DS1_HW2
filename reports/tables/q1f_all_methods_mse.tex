@@ -1,0 +1,18 @@
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Method & Train MSE & Test MSE \\
+\midrule
+Bagging (B=500) & 324906.5196 & 991954.0863 \\
+Random forest (B=1000, m=3) & 391169.5215 & 1039993.6076 \\
+Linear regression & 990105.9662 & 1492443.3790 \\
+Pruned tree (CV) & 203374.6143 & 1603134.2147 \\
+Unpruned tree & 0.0000 & 1851205.9103 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{-5pt}
+\caption{Train and test mean squared error (MSE) for all methods.}
+\label{tab:q1f-all-methods}
+\end{table}
