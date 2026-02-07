@@ -1,6 +1,7 @@
 # STAT 587 — Data Science I — Homework 2 (Winter 2026)
 
 This repository contains the code and reproducible analysis used to generate the figures and tables for Homework 2.
+The project was completed with a standardized structure, global output controls, and automated table/figure generation to support reproducibility and clean reporting.
 
 ## Assignment Overview
 
@@ -12,13 +13,23 @@ Predict the number of applications received (`Apps`) using the remaining variabl
 - Random forest (B = 500, 1000; m = 3)
 - Comparison and recommendation
 
-### Question 2: Business school admissions (admission.csv)
-Classify applicants into three categories (admit / do not admit / borderline):
+### Question 2: Business school admissions (`admission.csv`)
+Classify applicants into three categories (Admit / Not Admit / Border):
 - Exploratory analysis (training set)
-- LDA + decision boundary + performance (train/test)
-- QDA + decision boundary + performance (train/test)
-- KNN (choose K using test error) + metrics + test error
-- Comparison and recommendation
+- Linear Discriminant Analysis (LDA)
+  - Decision regions
+  - Confusion matrices and misclassification rates (train/test)
+  - Multiclass OvR sensitivity, specificity, and AUC
+- Quadratic Discriminant Analysis (QDA)
+  - Decision regions
+  - Confusion matrices and misclassification rates (train/test)
+  - Multiclass OvR sensitivity, specificity, and AUC
+- K-Nearest Neighbors (KNN)
+  - Predictor standardization
+  - Selection of K via 5-fold cross-validation
+  - Decision regions at optimal K
+  - Confusion matrices and multiclass OvR metrics (train/test)
+- Final comparison and recommendation based on test-set performance
 
 ## Repository Structure
 
@@ -26,16 +37,27 @@ Classify applicants into three categories (admit / do not admit / borderline):
   Input data files (e.g., `admission.csv`)
 
 - `notebooks/`  
-  Working Jupyter notebook(s) used for analysis and figure/table generation
+  Working Jupyter notebook(s) used for all analysis, modeling, and figure/table generation
 
 - `src/`  
-  Helper Python modules/functions used by the notebook(s)
+  Helper modules/functions used by the notebook(s)
 
 - `reports/figures/`  
-  Saved figures used in the written submission
+  Saved figures used in the written submission (automatically generated)
 
 - `reports/tables/`  
-  Saved tables used in the written submission
+  Saved tables used in the written submission (automatically generated)
+
+## Global Output Controls
+
+The notebook uses three global flags to control verbosity and artifact generation:
+
+```python
+VERBOSE = True      # Print/display intermediate outputs
+SAVE_FIGS = True    # Save figures to reports/figures/
+SAVE_TABLES = True  # Save LaTeX tables to reports/tables/
+```
+
 
 ## How to Run
 
@@ -50,4 +72,3 @@ Classify applicants into three categories (admit / do not admit / borderline):
 
    - Random seeds are fixed to support reproducibility
    - Figures/tables are saved to `reports/figures/` and `reports/tables`.
-   
